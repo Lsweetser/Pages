@@ -1,62 +1,113 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000000;
+    font-family: 'Arial', sans-serif;
     color: #ffffff;
+    background-color: #121212;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 20px;
+    color: #ffffff;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-h1 {
-    color: #1E90FF;
-    text-shadow: 
-        0 0 10px #1E90FF, 
-        0 0 20px #1E90FF, 
-        0 0 30px #1E90FF, 
-        0 0 40px #1E90FF;
-    transition: text-shadow 0.3s ease-in-out;
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
     margin-bottom: 20px;
 }
 
-h1:hover {
-    text-shadow: 
-        0 0 20px #1E90FF, 
-        0 0 30px #1E90FF, 
-        0 0 50px #1E90FF;
-}
-
-h2 {
-    color: #FFD700;
-    text-shadow: 
-        0 0 10px #FFD700, 
-        0 0 15px #FFD700, 
-        0 0 20px #FFD700;
+h1 {
+    font-size: 3em;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-p, ul {
+h2 {
+    font-size: 1.5em;
+    color: #bbbbbb;
+    text-transform: uppercase;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #202020;
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 2em;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.about p {
     font-size: 1.2em;
-    color: #ffffff;
-    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #cccccc;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
+/* Footer */
+footer {
+    background-color: #121212;
+    padding: 30px 0;
+    text-align: center;
 }
 
-li {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+footer .btn {
+    background-color: #FFD700;
+    color: #000000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    border-radius: 5px;
 }
+
+footer .btn:hover {
+    background-color: #ffaa00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .about p {
+        font-size: 1em;
+    }
+}
+
